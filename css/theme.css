@@ -1,0 +1,11 @@
+/* Cores da Marca e Imagem de Fundo */
+:root {
+    /* Cores Principais - Assoalhos Classe A */
+    --primary: #C8A04A;    /* Dourado Madeira */
+    --secondary: #1C2340;  /* Azul Escuro Premium */
+    --accent: #25D366;     /* WhatsApp Verde */
+    --white: #ffffff;
+
+    /* Imagem de Fundo da Seção Hero */
+    --bg-hero: url('../assets/fundo.jpg');
+}
