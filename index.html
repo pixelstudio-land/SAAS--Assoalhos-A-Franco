@@ -1,133 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orçamento Online | Assoalhos Classe A</title>
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17956364460"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'AW-17956364460');
-    </script>
+    <title>Floor Store | Orçamento de Piso Online</title>
+    <meta name="description" content="Faça seu orçamento de piso laminado ou vinílico online em 30 segundos. Floor Store — qualidade e instalação com o melhor preço.">
 
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '432471144952084');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=743224956543243&ev=PageView&noscript=1"
-    /></noscript>
+    <!-- META PIXEL CONFIG EXTERNO -->
+    <script src="js/pixel.js"></script>
+
+    <!-- ESTILOS EXTERNOS -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-    <style>
-        /* --- RESET & BASE --- */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Open Sans', sans-serif; color: #333; line-height: 1.6; }
-        h1, h2, h3 { font-family: 'Montserrat', sans-serif; font-weight: 700; }
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-        
-        :root {
-            --primary: #C6121E;
-            --secondary: #1A1A1B;
-            --accent: #25D366;
-            --white: #ffffff;
-        }
-
-        /* --- HEADER --- */
-        header { background: var(--secondary); padding: 12px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: fixed; width: 100%; top: 0; z-index: 1000; }
-        header .flex { display: flex; justify-content: space-between; align-items: center; }
-        
-        .logo { display: flex; align-items: center; gap: 8px; font-size: 1.2rem; font-weight: 900; color: var(--white); text-transform: uppercase; }
-        .logo img { height: 35px; width: auto; }
-        .logo span { color: var(--primary); }
-
-        .btn-zap-header { background: var(--accent); color: white; padding: 8px 16px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 0.9rem; display: flex; align-items: center; gap: 6px; }
-
-        /* --- HERO --- */
-        .hero { background: linear-gradient(rgba(26, 26, 27, 0.85), rgba(26, 26, 27, 0.85)), url('fundo.jpg'); background-size: cover; background-position: center; min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; color: white; padding: 90px 0 60px 0; }
-        .hero h1 { font-size: 2rem; margin-bottom: 10px; text-transform: uppercase; }
-        .hero h1 span { color: var(--primary); }
-        .hero p { font-size: 1rem; margin-bottom: 25px; opacity: 0.9; }
-
-        /* --- CALCULADORA --- */
-        .calculator-box { background: white; color: var(--secondary); padding: 25px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.4); max-width: 500px; margin: 0 auto; text-align: left; border-top: 5px solid var(--primary); }
-        .form-group { margin-bottom: 12px; }
-        .form-group label { display: block; font-weight: 600; margin-bottom: 5px; font-size: 0.85rem; color: #555; }
-        .form-group input, .form-group select { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px; font-size: 0.95rem; background: #f9f9f9; }
-        
-        .btn-calc { width: 100%; background: var(--primary); color: var(--white); border: none; padding: 15px; font-size: 1rem; font-weight: 700; text-transform: uppercase; border-radius: 8px; cursor: pointer; transition: 0.3s; margin-top: 10px; }
-        .btn-calc:hover { background: #a50f19; transform: translateY(-2px); }
-
-        /* --- FEATURES --- */
-        .features { padding: 50px 0; text-align: center; background: #fff; }
-        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 30px; }
-        .feature-item i { font-size: 2rem; color: var(--primary); margin-bottom: 15px; }
-        .feature-item h3 { margin-bottom: 10px; font-size: 1.1rem; }
-
-        /* --- MODAL --- */
-        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 2000; display: none; justify-content: center; align-items: center; padding: 20px; }
-        .modal-content { background: white; padding: 25px; border-radius: 15px; max-width: 500px; width: 100%; text-align: center; position: relative; border-top: 5px solid var(--primary); }
-        .price-display { background: #f4f4f4; padding: 15px; border-radius: 10px; margin: 15px 0; border-left: 5px solid var(--primary); }
-        .total-value { font-size: 2.2rem; font-weight: 900; color: var(--primary); }
-        .btn-action { display: flex; justify-content: center; align-items: center; gap: 8px; width: 100%; background: var(--accent); color: white; padding: 15px; text-decoration: none; font-weight: 700; border-radius: 8px; animation: pulse 2s infinite; }
-        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.02); } 100% { transform: scale(1); } }
-
-        /* --- FOOTER (Logo Corrigido) --- */
-        footer { background: var(--secondary); color: #ccc; padding: 25px 0; font-size: 0.8rem; }
-        .footer-row { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; }
-        .footer-brand { display: flex; align-items: center; gap: 10px; color: white; font-weight: 700; text-transform: uppercase; }
-        .footer-brand img { height: 30px; width: auto; display: block; }
-        .footer-text { text-align: right; opacity: 0.8; }
-
-        @media (max-width: 480px) {
-            .hero h1 { font-size: 1.6rem; }
-            .footer-row { justify-content: center; text-align: center; }
-            .footer-text { text-align: center; }
-        }
-    </style>
+    
+    <!-- CSS DA BASE -->
+    <link rel="stylesheet" href="css/global.css">
+    <!-- CSS TEMA/CORES DO CLIENTE -->
+    <link rel="stylesheet" href="css/theme.css">
 </head>
+
 <body>
 
     <header>
         <div class="container flex">
             <div class="logo">
-                <img src="logo.png" alt="Logo" onerror="this.style.display='none'"> 
-                <div>ASSOALHOS <span style="color: var(--primary);">CLASSE A</span></div>
+                <img src="assets/logo.png" alt="Floor Store" onerror="this.style.display='none'">
+                <div class="dynamic-brand">NOME <span>MARCA</span></div>
             </div>
-            <a href="https://wa.me/5511943893777" target="_blank" class="btn-zap-header"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <a href="#" target="_blank" class="btn-zap-header" id="headerZapBtn">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
         </div>
     </header>
 
     <section class="hero">
         <div class="container hero-content">
-            <h1>Instalação EM <br> <span style="color: var(--primary);">SÃO PAULO E REGIÃO</span></h1>
-            <p>Faça seu orçamento em 30s - Garanta <strong>CONDIÇÕES EXCLUSIVAS</strong>.</p>
+            <h1>RENOVE SEUS AMBIENTES COM <br> <span>PISOS DE QUALIDADE</span></h1>
+            <p>Laminado e Vinílico com instalação inclusa. Faça seu orçamento em 30 segundos.</p>
+
             <div class="calculator-box">
                 <div class="form-group">
                     <label>Qual a metragem aproximada? (m²)</label>
                     <input type="number" id="metragem" placeholder="Ex: 45">
                 </div>
+
                 <div class="form-group">
                     <label>Piso atual do local?</label>
                     <select id="pisoAtual">
-                        <option value="Contrapiso">Contrapiso (Cimento)</option>
-                        <option value="Cerâmica">Cerâmica / Porcelanato</option>
-                        <option value="Madeira">Madeira / Taco</option>
-                        <option value="Outro">Outro / Não sei</option>
+                        <!-- Populado dinamicamente via js/main.js -->
                     </select>
                 </div>
+
                 <div class="form-group">
                     <label>O piso está nivelado?</label>
                     <select id="nivelamento">
@@ -136,14 +60,14 @@
                         <option value="Não">Não, está irregular</option>
                     </select>
                 </div>
+
                 <div class="form-group">
-                    <label>Escolha o tipo de Piso:</label>
+                    <label>Tipo de piso preferido?</label>
                     <select id="modelo">
-                        <option value="69.00" data-tipo="vinilico-colado">Vinílico Colado (Completo + Rodapé) - R$ 69,00/m²</option>
-                        <option value="155.00" data-tipo="vinilico-click">Vinílico Click (Completo + Rodapé) - R$ 155,00/m²</option>
-                        <option value="72.00" data-tipo="laminado-click">Laminado Click (a partir de) - R$ 72,00/m²</option>
+                        <!-- Populado dinamicamente via js/main.js -->
                     </select>
                 </div>
+
                 <button class="btn-calc" onclick="calcular()">VER PREÇO ESTIMADO</button>
             </div>
         </div>
@@ -151,11 +75,24 @@
 
     <section class="features">
         <div class="container">
-            <h2>Por que escolher a <span style="color:var(--primary)">ASSOALHOS CLASSE A LOJA FRANCO</span>?</h2>
+            <h2 class="dynamic-feature-brand">Por que escolher a <span>MARCA</span>?</h2>
+
             <div class="feature-grid">
-                <div class="feature-item"><i class="fas fa-bolt"></i><h3>Instalação Rápida</h3><p>Equipe rápida e limpa.</p></div>
-                <div class="feature-item"><i class="fas fa-medal"></i><h3>Garantia Total</h3><p>Segurança na instalação.</p></div>
-                <div class="feature-item"><i class="fas fa-comments-dollar"></i><h3>Negociação Direta</h3><p>Fale diretamente com quem resolve.</p></div>
+                <div class="feature-item">
+                    <i class="fas fa-layer-group"></i>
+                    <h3>Laminado e Vinílico</h3>
+                    <p>Grande variedade de padrões, texturas e espessuras para todos os ambientes.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-tools"></i>
+                    <h3>Instalação Inclusa</h3>
+                    <p>Equipe especializada cuida de tudo, do preparo do piso até o acabamento final.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-tags"></i>
+                    <h3>Melhor Preço</h3>
+                    <p>Preço direto de loja com condições de pagamento facilitadas para você.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -163,60 +100,47 @@
     <footer>
         <div class="container footer-row">
             <div class="footer-brand">
-                <img src="logo.png" alt="Logo" onerror="this.style.display='none'">
-                <div>ASSOALHOS <span style="color: var(--primary);">CLASSE A</span></div>
+                <img src="assets/logo.png" alt="Floor Store" onerror="this.style.display='none'">
+                <div class="dynamic-brand">NOME <span>MARCA</span></div>
             </div>
             <div class="footer-text">
-                &copy; 2026. Desenvolvido por Legado Performance
+                &copy; Todos os direitos reservados. <span style="margin: 0 5px; opacity: 0.3;">|</span> Desenvolvido
+                por Pixel Studio
             </div>
         </div>
     </footer>
 
+    <!-- MODAL DE RESULTADO -->
     <div class="modal-overlay" id="modalResult">
         <div class="modal-content">
-            <span style="position:absolute; top:10px; right:15px; cursor:pointer;" onclick="fecharModal()">&times;</span>
+            <span class="close-modal" onclick="fecharModal()">&times;</span>
+
             <h3>Orçamento Estimado</h3>
+
             <div class="price-display">
+                <div class="total-label">Investimento Aproximado</div>
                 <div class="total-value" id="valorFinal">R$ 0,00</div>
             </div>
-            <div id="listaInclusos" style="margin-bottom:20px; text-align:left; font-size:0.85rem;"></div>
-            <a href="#" id="linkZap" class="btn-action" target="_blank">AGENDAR VISITA <i class="fab fa-whatsapp"></i></a>
+
+            <div class="bonus-list">
+                <p style="margin-bottom:10px; font-weight:600;">Condições Exclusivas Hoje:</p>
+                <!-- Populado dinamicamente via js/main.js -->
+                <div id="bonusListRenderer"></div>
+            </div>
+
+            <a href="#" id="linkZap" class="btn-action" target="_parent">
+                AGENDAR VISITA <i class="fab fa-whatsapp"></i>
+            </a>
+
+            <p class="disclaimer">
+                *Valor estimado. Visita técnica necessária para validar.
+            </p>
         </div>
     </div>
 
-    <script>
-        function calcular() {
-            const metragem = parseFloat(document.getElementById('metragem').value);
-            const modeloEl = document.getElementById('modelo');
-            const precoMetro = parseFloat(modeloEl.value);
-            const tipoPiso = modeloEl.options[modeloEl.selectedIndex].getAttribute('data-tipo');
-            const modeloNome = modeloEl.options[modeloEl.selectedIndex].text.split('(')[0];
-            const pisoAtual = document.getElementById('pisoAtual').value;
-
-            if (isNaN(metragem) || metragem < 1) {
-                alert("Por favor, digite uma metragem válida.");
-                return;
-            }
-
-            let total = metragem * precoMetro;
-            const valorFormatado = total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-            document.getElementById('valorFinal').innerText = valorFormatado;
-
-            let html = `<p><strong>O que está incluso:</strong></p>`;
-            html += tipoPiso === 'vinilico' ? `<p>✓ Primer e Regularização</p><p>✓ Cola e Rodapé</p>` : `<p>✓ Manta Acústica</p><p>✓ Rodapé</p>`;
-            html += `<p>✓ Mão de Obra Especializada</p>`;
-            document.getElementById('listaInclusos').innerHTML = html;
-
-            const textoZap = `Olá! Fiz um orçamento:\n*Metragem:* ${metragem}m²\n*Piso:* ${modeloNome}\n*Valor:* ${valorFormatado}\n*Piso Atual:* ${pisoAtual}\nQuero agendar visita.`;
-            
-            // NÚMERO CORRIGIDO AQUI TAMBÉM (94389)
-            document.getElementById('linkZap').href = `https://wa.me/5511943893777?text=${encodeURIComponent(textoZap)}`;
-            document.getElementById('modalResult').style.display = 'flex';
-
-            if(typeof fbq === 'function') fbq('track', 'Lead', { value: total, currency: 'BRL' });
-            if(typeof gtag === 'function') gtag('event', 'conversion', { 'send_to': 'AW-17956364460/HduwCP_tpvkbEKzBofJC', 'value': total, 'currency': 'BRL' });
-        }
-        function fecharModal() { document.getElementById('modalResult').style.display = 'none'; }
-    </script>
+    <!-- SCRIPTS DE CONFIGURAÇÃO E LÓGICA -->
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
