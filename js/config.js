@@ -12,9 +12,9 @@ const CONFIG = {
 
     // 2. OPÇÕES DE PISOS E PREÇOS (O Select será populado sozinho no HTML)
     pisos: [
-        { categoria: "Piso Vinílico", nome: "Vinílico Colado (Completo + Rodapé)", preco: 69.00 },
-        { categoria: "Piso Vinílico", nome: "Vinílico Click (Completo + Rodapé)",  preco: 155.00 },
-        { categoria: "Piso Laminado", nome: "Laminado Click (a partir de)",         preco: 72.00 }
+        { categoria: "Piso Vinílico", nome: "Vinílico Colado", preco: 69.00 },
+        { categoria: "Piso Vinílico", nome: "Vinílico Click",  preco: 155.00 },
+        { categoria: "Piso Laminado", nome: "Laminado Click",         preco: 72.00 }
     ],
 
     // 3. OPÇÕES DE PISO ATUAL (Select 1)
