@@ -54,8 +54,10 @@ header .flex {
 }
 
 .logo img {
-    height: 35px;
-    width: auto;
+    height: 45px;
+    width: 45px;         /* quadrado 4:4 */
+    object-fit: contain; /* sem corte, sem distorção */
+    object-position: center;
 }
 
 .logo span {
@@ -374,8 +376,9 @@ footer {
 }
 
 .footer-brand img {
-    height: 25px;
-    width: auto;
+    height: 35px;
+    width: 35px;         /* quadrado 4:4 */
+    object-fit: contain;
     opacity: 0.8;
 }
 
