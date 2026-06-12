@@ -52,7 +52,7 @@ function inicializarDadosEstruturais() {
             pisosDaCategoria.forEach(piso => {
                 const tempOption = document.createElement('option');
                 tempOption.value = piso.preco;
-                tempOption.innerText = `${piso.nome} - R$ ${piso.preco.toFixed(2).replace('.', ',')}/m²`;
+                tempOption.innerText = `${piso.nome} - a partir de R$ ${piso.preco.toFixed(2).replace('.', ',')}/m²`;
                 optgroup.appendChild(tempOption);
             });
             
