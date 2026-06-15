@@ -9,3 +9,6 @@
     /* Imagem de Fundo da Seção Hero */
     --bg-hero: url('../assets/fundo.jpg');
 }
+
+/* Cliente: oculta bloco de bônus do modal */
+.bonus-list { display: none !important; }
